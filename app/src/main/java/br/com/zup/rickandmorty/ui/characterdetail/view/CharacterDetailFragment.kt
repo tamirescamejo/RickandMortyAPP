@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import br.com.zup.rickandmorty.CHARACTER_KEY
 import br.com.zup.rickandmorty.R
-import br.com.zup.rickandmorty.URL_BASE_IMAGE
 import br.com.zup.rickandmorty.data.model.CharacterResult
 import br.com.zup.rickandmorty.databinding.FragmentCharacterDetailBinding
 import br.com.zup.rickandmorty.ui.home.view.HomeActivity
@@ -34,7 +33,7 @@ class CharacterDetailFragment : Fragment() {
         val character = arguments?.getParcelable<CharacterResult>(CHARACTER_KEY)
 
         character?.let {
-            Picasso.get().load(URL_BASE_IMAGE)
+            Picasso.get().load(character.image)
                 .into(binding.ivCharacter)
 
             binding.tvCharacterNameEdit.text = it.name

@@ -29,5 +29,4 @@
             app:destination="@id/characterDetailFragment" />
     </fragment>
 
-
 </navigation>

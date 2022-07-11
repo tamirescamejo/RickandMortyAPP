@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_16"
-            android:text="@string/app_name"
+            android:text="@string/text_name"
             android:textColor="@color/white"
             android:textSize="@dimen/size_15"
             android:textStyle="bold"

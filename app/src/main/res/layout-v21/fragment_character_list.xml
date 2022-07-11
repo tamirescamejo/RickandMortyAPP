@@ -27,13 +27,13 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ivFavorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/width_40"
+        android:layout_height="@dimen/height_40"
         android:layout_margin="@dimen/margin_16"
+        android:layout_marginBottom="44dp"
         android:backgroundTint="@color/azul_escuro"
         android:src="@drawable/ic_star"
         android:tintMode="screen"
-        app:maxImageSize="@dimen/image_size_40"
         app:layout_constraintBottom_toBottomOf="@id/rvCharacterList"
         app:layout_constraintEnd_toEndOf="@id/rvCharacterList" />
 

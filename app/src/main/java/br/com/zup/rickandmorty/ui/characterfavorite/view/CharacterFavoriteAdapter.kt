@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.rickandmorty.R
-import br.com.zup.rickandmorty.URL_BASE_IMAGE
 import br.com.zup.rickandmorty.data.model.CharacterResult
 import br.com.zup.rickandmorty.databinding.CharacterItemBinding
 import com.squareup.picasso.Picasso
@@ -29,12 +28,6 @@ class CharacterFavoriteAdapter(
         holder.binding.ivCharacterImage.setOnClickListener {
             clickCharacter(character)
         }
-        holder.binding.ivFavorite.setOnClickListener {
-            character.isFavorite = !character.isFavorite
-            clickDisfavor(character)
-            characterList.remove(character)
-            notifyItemRemoved(position)
-        }
     }
 
     override fun getItemCount() = characterList.size
@@ -48,18 +41,8 @@ class CharacterFavoriteAdapter(
 
         fun showCharacterInfo(characterResult: CharacterResult) {
             binding.tvCharacterName.text = characterResult.name
-            Picasso.get().load(URL_BASE_IMAGE + characterResult)
+            Picasso.get().load(characterResult.image)
                 .into(binding.ivCharacterImage)
-
-            binding.ivFavorite.setImageDrawable(
-                ContextCompat.getDrawable(
-                    binding.root.context,
-                    if (characterResult.isFavorite)
-                        R.drawable.ic_star
-                    else
-                        R.drawable.ic_star_outline
-                )
-            )
         }
     }
 }

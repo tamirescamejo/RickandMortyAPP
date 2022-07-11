@@ -10,6 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.rickandmorty.CHARACTER_KEY
 import br.com.zup.rickandmorty.R
@@ -93,11 +94,11 @@ class CharacterListFragment : Fragment() {
                 else -> {}
             }
         }
-    }
+}
 
     private fun setUpRvCharacterList() {
         binding.rvCharacterList.adapter = adapter
-        binding.rvCharacterList.layoutManager = LinearLayoutManager(context)
+        binding.rvCharacterList.layoutManager = GridLayoutManager(context, 2)
     }
 
     private fun goToCharacterDetail(character: CharacterResult) {
