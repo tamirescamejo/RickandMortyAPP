@@ -10,7 +10,7 @@ class CharacterUseCase(application: Application) {
     private val characterDAO = CharacterDatabase.getDatabase(application).characterDao()
     private val characterRepository = CharacterRepository(characterDAO)
 
-    suspend fun getAllCharacters(): ViewState<List<CharacterResult>> {
+    fun getAllCharacters(): ViewState<List<CharacterResult>> {
         return try {
             val characters = characterRepository.getAllCharacters()
             ViewState.Success(characters)
@@ -19,7 +19,7 @@ class CharacterUseCase(application: Application) {
         }
     }
 
-    suspend fun getAllCharactersFavorited(): ViewState<List<CharacterResult>> {
+    fun getAllCharactersFavorited(): ViewState<List<CharacterResult>> {
         return try {
             val characters = characterRepository.getAllCharactersFavorited()
             ViewState.Success(characters)
@@ -28,7 +28,7 @@ class CharacterUseCase(application: Application) {
         }
     }
 
-    suspend fun updateCharactersFavorite(character: CharacterResult): ViewState<CharacterResult> {
+    fun updateCharactersFavorite(character: CharacterResult): ViewState<CharacterResult> {
         return try {
             characterRepository.updateCharacterFavorited(character)
             ViewState.Success(character)

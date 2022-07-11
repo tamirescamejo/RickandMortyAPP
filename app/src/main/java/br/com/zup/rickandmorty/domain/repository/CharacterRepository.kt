@@ -7,20 +7,16 @@ import br.com.zup.rickandmorty.data.model.CharacterResult
 
 class CharacterRepository(private val characterDAO: CharacterDAO) {
 
-    suspend fun getAllCharacters(): List<CharacterResult> = characterDAO.getAllCharacters()
+    fun getAllCharacters(): List<CharacterResult> = characterDAO.getAllCharacters()
 
-    suspend fun insertCharacter(character: CharacterResult) {
-        characterDAO.insertCharacter(character)
-    }
-
-    suspend fun insertAllCharactersDB(characterList: List<CharacterResult>) {
+    fun insertAllCharactersDB(characterList: List<CharacterResult>) {
         characterDAO.insertAllCharacters(characterList)
     }
 
-    suspend fun getAllCharactersFavorited(): List<CharacterResult> =
+    fun getAllCharactersFavorited(): List<CharacterResult> =
         characterDAO.getAllCharactersFavorited()
 
-    suspend fun updateCharacterFavorited(character: CharacterResult) {
+    fun updateCharacterFavorited(character: CharacterResult) {
         characterDAO.updateCharacterFavorite(character)
     }
 
