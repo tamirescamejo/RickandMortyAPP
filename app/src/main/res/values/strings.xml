@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Rick and Morty</string>
+    <string name="description_image">Imagem do Personagem Rick and Morty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_description">Imagem de Rick and Morty</string>
+    <string name="text_name">Nome:</string>
+    <string name="name_edit">Name edit</string>
+    <string name="text_species">Espécie:</string>
+    <string name="text_status_edit">Status Edit</string>
+    <string name="text_species_edit">Edit Species</string>
+    <string name="text_genre">Gênero:</string>
+    <string name="text_genre_edit">Edit Gereno</string>
 </resources>

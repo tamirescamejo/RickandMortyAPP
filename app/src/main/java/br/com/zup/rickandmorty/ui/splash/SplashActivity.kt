@@ -1,9 +1,9 @@
-package br.com.zup.rickandmorty.splash
+package br.com.zup.rickandmorty.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.zup.rickandmorty.HomeActivity
+import br.com.zup.rickandmorty.ui.home.view.HomeActivity
 import br.com.zup.rickandmorty.R
 import java.util.*
 
