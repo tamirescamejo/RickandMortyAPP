@@ -47,7 +47,7 @@ class CharacterFavoriteFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun initObserver() {
@@ -105,4 +105,7 @@ class CharacterFavoriteFragment : Fragment() {
     private fun disfavorCharacter(character: CharacterResult) {
         viewModel.disfavorCharacter(character)
     }
+
+
+
 }

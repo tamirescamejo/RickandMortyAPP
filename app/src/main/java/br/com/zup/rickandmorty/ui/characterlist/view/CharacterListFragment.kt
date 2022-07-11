@@ -42,6 +42,7 @@ class CharacterListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as HomeActivity).supportActionBar?.title = getString(R.string.app_name)
+        (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         setUpRvCharacterList()
         viewModel.getAllCharacters()

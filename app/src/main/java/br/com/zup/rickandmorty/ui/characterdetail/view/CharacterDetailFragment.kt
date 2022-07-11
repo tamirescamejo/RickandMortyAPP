@@ -55,6 +55,7 @@ class CharacterDetailFragment : Fragment() {
             )
 
             (activity as HomeActivity).supportActionBar?.title = it.name
+            (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
     }
 }
