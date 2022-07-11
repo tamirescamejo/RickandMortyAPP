@@ -40,18 +40,14 @@ class CharacterFavoriteFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        initObserver()
         viewModel.getAllCharactersFavorited()
+        setUpRvCharacterList()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (activity as HomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        initObserver()
-        setUpRvCharacterList()
     }
 
     private fun initObserver() {

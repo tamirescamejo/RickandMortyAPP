@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_16"
-            android:text="Status:"
+            android:text="@string/text_status"
             android:textColor="@color/white"
             android:textSize="@dimen/size_15"
             android:textStyle="bold"
@@ -117,11 +117,10 @@
 
         <ImageView
             android:id="@+id/ivFavoriteDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/width_40"
+            android:layout_height="@dimen/height_40"
             android:layout_margin="@dimen/margin_16"
             android:foregroundGravity="right"
-            app:maxImageSize="@dimen/image_size_40"
             android:src="@drawable/ic_star_outline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivCharacter" />

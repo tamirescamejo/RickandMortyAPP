@@ -11,4 +11,5 @@
     <string name="text_species_edit">Edit Species</string>
     <string name="text_genre">Gênero:</string>
     <string name="text_genre_edit">Edit Gereno</string>
+    <string name="text_status">Status:</string>
 </resources>
