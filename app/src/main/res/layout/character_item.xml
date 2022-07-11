@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_8">
 
         <ImageView
             android:id="@+id/ivCharacterImage"
@@ -17,7 +18,6 @@
             android:layout_height="@dimen/height_150"
             android:contentDescription="@string/description_image"
             android:scaleType="centerCrop"
-            android:layout_margin="@dimen/margin_8"
             android:src="@drawable/rick_morty"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,6 @@
             android:id="@+id/tvCharacterName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp"
             android:textAlignment="center"
             android:background="@color/azul_escuro"
             android:textColor="@color/white"
